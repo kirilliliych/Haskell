@@ -1,0 +1,14 @@
+-- (Maybe A, Maybe B) <=> Maybe (Either (A, B) (Either A B))
+--
+-- =>
+-- (Nothing, Nothing) -> Nothing
+-- (Just a, Nothing) -> Just Right Left a
+-- (Nothing, Just b) -> Just Right Right b
+-- (Just a, Just b) -> Just Left (a, b)
+--
+-- <=
+-- Nothing -> (Nothing, Nothing)
+-- Just Right Left a -> (Just a, Nothing)
+-- Just Right Right b -> (Nothing, Just b)
+-- Just Left (a, b) -> (Just a, Just b)
+

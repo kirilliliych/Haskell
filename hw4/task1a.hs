@@ -1,0 +1,11 @@
+-- Ordering <=> Either () Bool
+--
+-- =>
+-- LT -> Right false
+-- GT -> Right true
+-- EQ -> Left ()
+--
+-- <=
+-- Right false -> LT
+-- Right true -> GT
+-- Left () -> EQ
